@@ -1,7 +1,14 @@
 import React from 'react';
+import Hero from './sections/Hero';
+import Gallery from './sections/Gallery';
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <Hero />
+      <Gallery />
+    </>
+  );
 };
 
 export default App;

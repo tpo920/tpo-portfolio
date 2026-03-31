@@ -1,7 +1,8 @@
 import { useRef } from 'react';
+import ZoomableImage from '../components/ZoomableImage/ZoomableImage';
 import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
 import SrollTrigger from 'gsap/ScrollTrigger';
-import ZoomableImage from '../components/ZoomableImage';
 
 gsap.registerPlugin(SrollTrigger);
 
@@ -9,21 +10,55 @@ const Gallery = () => {
   // Section ref
   const sectionRef = useRef(null);
   // Gallery component refs
-  const gallery1Ref = useRef(null);
-  const gallery2Ref = useRef(null);
-  // Image refs
-  const storyBoardRef = useRef(null);
-  const eggyRef = useRef(null);
+  const leftGalleryComponent = useRef(null);
+  const rightGalleryComponent = useRef(null);
 
-  //TODO animation
-  /// Insert insert//
+  //On scroll animation
+  useGSAP(() => {
+    // Animation for the main section
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5 }
+    );
+
+    // Animations for each app showcase
+    const components = [
+      leftGalleryComponent.current,
+      rightGalleryComponent.current,
+    ];
+
+    components.forEach((component, index) => {
+      gsap.fromTo(
+        component,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.1 * (index + 1),
+          scrollTrigger: {
+            trigger: component,
+            start: 'top bottom-=100',
+          },
+          ease: 'power2.inOut',
+        }
+      );
+    });
+  }, []);
 
   return (
     <section id="gallery" ref={sectionRef} className="app-showcase">
       <div className="w-full">
         <div className="showcaselayout">
           {/* LEFT Section */}
-          <div className="first-gallery-element-wrapper" ref={gallery1Ref}>
+          <div
+            className="first-gallery-element-wrapper"
+            ref={leftGalleryComponent}
+          >
             <div className="video-wrapper">
               <video autoPlay loop muted playsInline width="100%">
                 <source
@@ -50,15 +85,11 @@ const Gallery = () => {
           {/* RIGHT Section */}
           <div
             className="gallery-list-wrapper overflow-visible"
-            ref={gallery2Ref}
+            ref={rightGalleryComponent}
           >
             <div className="project">
               <div className="image-wrapper bg-white">
-                <ZoomableImage
-                  src="/images/Storyboard.png"
-                  alt="storyboard"
-                  ref={storyBoardRef}
-                />
+                <ZoomableImage src="/images/Storyboard.png" alt="storyboard" />
               </div>
               <div className="text-content">
                 <h2 className="mt-2.5">
@@ -73,11 +104,7 @@ const Gallery = () => {
             </div>
             <div className="project">
               <div className="image-wrapper bg-[#c2dcf5]">
-                <ZoomableImage
-                  src="/images/Eggy.png"
-                  alt="eggy"
-                  ref={eggyRef}
-                />
+                <ZoomableImage src="/images/Eggy.png" alt="eggy" />
               </div>
               <div className="text-content">
                 <h2 className="mt-2.5">Eggy🥚</h2>

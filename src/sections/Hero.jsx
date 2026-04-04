@@ -2,13 +2,13 @@ import React from 'react';
 import { HobbiesText } from '../utils/Hobbies';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import IconButton from '../components/IconButton';
+import { SocialIconsData } from '../utils/Socials';
 import HeroExperience from '../components/HeroModels/HeroExperience';
 
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(
-      '.hero-header h1, .hero-text',
+      '.hero-header h1, .hero-text, img',
       {
         y: 50,
         opacity: 0,
@@ -30,9 +30,16 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-2">
             <div className="hero-header">
-              <h1>
-                Hello, <span>I&apos;m Trevor</span>
-              </h1>
+              <div className="flex flex-row gap-6">
+                <h1>
+                  Hello, <span>I&apos;m Trevor </span>
+                </h1>
+                <img
+                  className="md:w-20 md:mt-3 md:h-20 w-15 h-15 rounded-full"
+                  src="/images/eggdog.jpg"
+                  alt="Eggdog"
+                />
+              </div>
             </div>
             <p className="hero-text">
               Some of my hobbies include
@@ -49,6 +56,18 @@ const Hero = () => {
                 </span>
               </span>
             </p>
+            <div className="hero-icons">
+              {SocialIconsData.map((social) => (
+                <a
+                  className="icon"
+                  target="_blank"
+                  key={social.url}
+                  href={social.url}
+                >
+                  <img src={social.imgPath} alt={social.name} />
+                </a>
+              ))}
+            </div>
           </div>
         </header>
 

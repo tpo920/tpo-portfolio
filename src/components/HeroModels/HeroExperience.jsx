@@ -1,28 +1,37 @@
-import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import { Laptop } from './Laptop';
+import { useMediaQuery } from 'react-responsive';
 
 const HeroExperience = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   //const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
 
   return (
-    <Canvas camera={{ position: [0, 0, 40], fov: 45 }}>
-      <ambientLight intensity={0.2} color="#1a1a40" />
-      <directionalLight position={[5, 5, 5]} intensity={1} />
-
+    <Canvas camera={{ position: [0, 0, 25], fov: 45 }}>
       <OrbitControls
         enablePan={false}
         enableZoom={false}
         maxDistance={20}
         minDistance={5}
-        minPolarAngle={Math.PI / 5}
+        minPolarAngle={Math.PI / 3}
         maxPolarAngle={Math.PI / 2}
+        minAzimuthAngle={-Math.PI / 5}
+        maxAzimuthAngle={Math.PI / 2}
       />
 
-      <mesh>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="blue" />
-      </mesh>
+      <directionalLight position={[5, 0, 0]} intensity={15} color="#1a1a40" />
+      <directionalLight position={[-5, -1, 2]} intensity={10} color="#9d4edd" />
+      <directionalLight position={[5, 5, 5]} intensity={3} />
+      <directionalLight position={[-5, 0, 0]} intensity={2} />
+
+      <group
+        scale={isMobile ? 1 : 1.5}
+        position={[-1, -2.7, 3]}
+        rotation={[0, -Math.PI / 3.5, -0.25]}
+      >
+        <Laptop />
+      </group>
     </Canvas>
   );
 };

@@ -25,8 +25,6 @@ section {
   --color-black-50: #1c1c21;
   --color-black-100: #0e0e10;
   --color-black-200: #282732;
-  --color-blue-50: #839cb5;
-  --color-blue-100: #2d2d38;
 }
 
 @layer utilities {
@@ -61,7 +59,7 @@ section {
 
   /* HERO SECTION */
   .hero-layout {
-    @apply relative z-10 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
+    @apply relative z-10 md:h-dvh h-[80vh] lg:mt-5 mt-20 flex xl:items-center items-start justify-center;
   }
 
   .hero-header {
@@ -88,7 +86,7 @@ section {
   }
 
   .hero-3d-layout {
-    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-0 top-24 xl:-right-20 right-0;
+    @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:top-0 top-10 xl:-right-20 right-0;
   }
 
   /* Hero hobbies text slider starts */

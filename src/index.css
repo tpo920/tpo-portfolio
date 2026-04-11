@@ -36,6 +36,10 @@ section {
   .flex-col-center {
     @apply flex flex-col justify-center items-center;
   }
+
+  .text-gray_gradient {
+    @apply bg-linear-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+  }
 }
 
 @layer components {
@@ -55,32 +59,7 @@ section {
     @apply xl:mt-20 md:mt-0 mt-40;
   }
 
-  /* General Grids */
-  .grid-base {
-    @apply grid grid-cols-1;
-  }
-
-  .grid-2-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
-  }
-
-  .grid-3-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
-  }
-
-  .grid-3-cols-md-tight {
-    @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0;
-  }
-
-  .grid-4-cols {
-    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7;
-  }
-
-  .grid-12-cols {
-    @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
-  }
-
-  /* HERO STYLING */
+  /* HERO SECTION */
   .hero-layout {
     @apply relative z-10 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
   }
@@ -143,6 +122,35 @@ section {
     }
   }
   /* Hero hobbies text slider ends */
+
+  /* ABOUT SECTION */
+  .grid-container {
+    @apply w-full h-full border-2 border-[#1C1C21] bg-[#0E0E10] rounded-lg py-5 px-7;
+  }
+
+  .grid-sub-container {
+    @apply w-full border-2 border-[#1C1C21] bg-[#0E0E10] rounded-lg py-2 px-2;
+  }
+
+  .grid-headtext {
+    @apply text-3xl font-medium  text-white;
+  }
+
+  .grid-subtext {
+    @apply text-[#afb0b6];
+  }
+
+  .education-content_container {
+    @apply grid grid-cols-[auto_1fr] items-start gap-4 rounded-lg;
+  }
+
+  .education-content_bar {
+    @apply flex-1 w-0.5 mt-4 h-full bg-black-200;
+  }
+
+  .tech-logo {
+    @apply w-10 h-10 rounded-md  border border-black-50 bg-black-200 flex justify-center items-center;
+  }
 
   /* NAVBAR STYLING */
   .navbar {
@@ -248,10 +256,6 @@ section {
 
   .card-border {
     @apply border border-black-50 bg-black-100;
-  }
-
-  .marquee-item {
-    @apply md:w-40 w-32;
   }
 
   .timeline-wrapper {
@@ -367,34 +371,6 @@ section {
     rgba(255, 255, 255, 0) 100%
   );
 }
-
-/* marquee */
-.marquee {
-  width: 100dvw;
-  overflow: hidden;
-  position: relative;
-}
-.marquee-box {
-  display: flex;
-  align-items: center;
-  width: 200%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  animation: marquee 60s linear infinite;
-}
-.marquee-item {
-  float: left;
-}
-@keyframes marquee {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
-}
-/* marquee end */
 
 .card {
   --start: 0;

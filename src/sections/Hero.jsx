@@ -8,7 +8,7 @@ import HeroExperience from '../components/HeroModels/HeroExperience';
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(
-      '.hero-header h1, .hero-text, img',
+      '.hero-header h1, .hero-text, .eggdog-img, .hero-icons',
       {
         y: 50,
         opacity: 0,
@@ -35,7 +35,7 @@ const Hero = () => {
                   Hello, <span>I&apos;m Trevor </span>
                 </h1>
                 <img
-                  className="md:w-20 md:mt-3 md:h-20 w-15 h-15 rounded-full"
+                  className="eggdog-img md:w-20 md:mt-3 md:h-20 w-15 h-15 rounded-full"
                   src="/images/eggdog.jpg"
                   alt="Eggdog"
                 />

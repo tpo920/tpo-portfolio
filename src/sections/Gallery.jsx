@@ -60,7 +60,7 @@ const Gallery = () => {
             ref={leftGalleryComponent}
           >
             <div className="video-wrapper">
-              <video autoPlay loop muted playsInline width="100%">
+              <video muted playsInline controls width="100%">
                 <source
                   src="/clips/TrevorCryptocurrencyAnimation.mp4"
                   type="video/mp4"

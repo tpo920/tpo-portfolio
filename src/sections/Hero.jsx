@@ -1,11 +1,16 @@
-import React from 'react';
+import { useRef } from 'react';
 import { HobbiesText } from '../utils/Hobbies';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import SrollTrigger from 'gsap/ScrollTrigger';
 import { SocialIconsData } from '../utils/Socials';
 import HeroExperience from '../components/HeroModels/HeroExperience';
 
+gsap.registerPlugin(SrollTrigger);
+
 const Hero = () => {
+  const modelRef = useRef(null);
+
   useGSAP(() => {
     gsap.fromTo(
       '.hero-header h1, .hero-text, .eggdog-img, .hero-icons',
@@ -19,6 +24,25 @@ const Hero = () => {
         stagger: 0.2,
         duration: 1,
         ease: 'power2.inOut',
+      }
+    );
+
+    const model = modelRef.current;
+
+    gsap.fromTo(
+      model,
+      { x: 150, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1.2,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+          trigger: model,
+          start: 'top 50%',
+          end: 'bottom 50%',
+          toggleActions: 'play reverse play reverse',
+        },
       }
     );
   });
@@ -74,7 +98,7 @@ const Hero = () => {
         {/* RIGHT: Hero Model*/}
         <figure>
           <div className="hero-3d-layout">
-            <HeroExperience />
+            <HeroExperience ref={modelRef} />
           </div>
         </figure>
       </div>

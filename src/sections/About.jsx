@@ -1,23 +1,60 @@
+import { useRef } from 'react';
 import ModifiedGlobe from '../components/ModifiedGlobe';
 import TechnicalSkillsIcons from '../components/TechnicalSkillsIcons';
+import gsap from 'gsap';
+import SrollTrigger from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import { Languages, Frameworks, Other } from '../utils/TechSkills';
 import { Education } from '../utils/Education';
 
+gsap.registerPlugin(SrollTrigger);
+
 const About = () => {
+  // Section ref
+  const sectionRef = useRef(null);
+
+  useGSAP(() => {
+    // Animation for the main section
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5 }
+    );
+
+    gsap.fromTo(
+      '.grid-container',
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '#about',
+          start: 'top bottom-=100',
+        },
+        ease: 'power2.inOut',
+      }
+    );
+  });
+
   return (
     <section
       id="about"
-      className="w-full px-5 md:px-20 py-10 md:py-20 flex items-center justify-center"
+      className="w-full px-5 md:px-20 py-10 md:py-20 md:mt-10 mt-20 flex items-center justify-center"
     >
-      <div className="grid grid-cols-4 grid-rows-1 gap-5 w-full">
-        <div className="grid-container p-3">
+      <div className="grid lg:grid-cols-4 lg:grid-rows-2 grid-cols-1 w-full gap-5">
+        <div className="grid-container p-3 lg:flex hidden">
           <img
             src="/images/ProfilePicture.jpg"
             alt="Profile Picture"
             className="w-full h-full object-contain rounded-lg"
           />
         </div>
-        <div className="grid-container col-span-2">
+        <div className="grid-container lg:col-span-2">
           <div>
             <p className="grid-headtext">Trevor Po</p>
             <p className="font-medium font-mb-0.5 text-lg text-[#dddddd]">
@@ -39,8 +76,10 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="grid-container col-span-2 col-start-1 row-start-2">
-          <p className="grid-headtext text-2xl mb-1">Education</p>
+        <div className="grid-container lg:col-span-2 lg:col-start-1 lg:row-start-2">
+          <p className="grid-headtext text-2xl xl:mb-1 lg:mb-5 mb-2">
+            Education
+          </p>
           {Education.map((item, index) => (
             <div key={index} className="education-content_container">
               <div className="flex flex-col h-full justify-start items-center py-2">
@@ -73,19 +112,21 @@ const About = () => {
             </div>
           ))}
         </div>
-        <div className="grid-container col-start-3 row-start-2 flex flex-col">
-          <p className="grid-headtext text-2xl">Location</p>
+        <div className="grid-container lg:col-start-3 lg:row-start-2 flex flex-col">
+          <p className="grid-headtext text-2xl xl:mb-1 lg:mb-10 mb-1">
+            Location
+          </p>
           <div className="rounded-3xl flex justify-center items-center">
             <ModifiedGlobe />
           </div>
-          <div>
+          <div className="mt-2">
             <p className="grid-subtext">
               Currently based in{' '}
-              <span className="font-semibold">Auckland, New Zealand</span>.
+              <span className="font-medium">Auckland, New Zealand</span>.
             </p>
           </div>
         </div>
-        <div className="grid-container row-span-2 col-start-4 row-start-1">
+        <div className="grid-container lg:row-span-2 lg:col-start-4 lg:row-start-1">
           <p className="grid-headtext text-2xl">Technical Skills</p>
           <p className="grid-subtext ">
             I am proficient in several programming languages and frameworks

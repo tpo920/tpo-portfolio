@@ -4,12 +4,16 @@ import { Laptop } from './Laptop';
 import { useMediaQuery } from 'react-responsive';
 import { Suspense } from 'react';
 
-const HeroExperience = () => {
+const HeroExperience = ({ ref }) => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   //const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
 
   return (
-    <Canvas camera={{ position: [0, 0, 25], fov: 45 }} frameloop="demand">
+    <Canvas
+      camera={{ position: [0, 0, 25], fov: 45 }}
+      frameloop="demand"
+      ref={ref}
+    >
       <OrbitControls
         enablePan={false}
         enableZoom={false}

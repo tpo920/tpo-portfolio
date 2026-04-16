@@ -38,7 +38,7 @@ const Hero = () => {
         duration: 1.2,
         ease: 'power2.inOut',
         scrollTrigger: {
-          trigger: model,
+          trigger: '#hero',
           start: 'top 50%',
           end: 'bottom 50%',
           toggleActions: 'play reverse play reverse',

@@ -15,11 +15,13 @@ const About = () => {
 
   useGSAP(() => {
     // Animation for the main section
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
-    );
+    if (sectionRef.current) {
+      gsap.fromTo(
+        sectionRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.5 }
+      );
+    }
 
     gsap.fromTo(
       '.grid-container',

@@ -66,7 +66,7 @@ const Experience = () => {
         <p className="text-4xl font-medium text-white text-center">
           Work Experience
         </p>
-        <div className="w-[31%] border-b-2 border-blue-300 mt-1" />
+        <div className="w-[31%] border-b-2 border-blue-400 mt-1" />
       </div>
       <div className="mt-15 relative">
         <div className="relative z-50 xl:space-y-25 md:space-y-20 space-y-10">
@@ -87,7 +87,7 @@ const Experience = () => {
                   <div className="expText w-full h-full border-2 border-[#1C1C21] bg-[#0E0E10] rounded-lg py-5 px-7">
                     <div className="flex flex-row justify-between">
                       <h1 className="font-semibold text-2xl">{card.title}</h1>
-                      <p className="text-[#839CB5]">{card.date}</p>
+                      <p className="text-blue-300">{card.date}</p>
                     </div>
                     <p className="font-medium text-[#dddddd]">{card.company}</p>
                     <ul className="list-disc ms-5 mt-5 flex flex-col gap-2 text-[#afb0b6]">

@@ -2,7 +2,12 @@ import TechnicalSkillsLabel from './TechnicalSkillsLabel';
 
 const ProjectCard = ({ projectData }) => {
   return (
-    <div className="w-full h-full border-2 border-[#1C1C21] bg-[#0E0E10] rounded-lg flex flex-col justify-between">
+    <a
+      href={projectData.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group project-card"
+    >
       <div>
         <img
           className="w-full h-70 object-cover rounded-lg"
@@ -19,7 +24,7 @@ const ProjectCard = ({ projectData }) => {
           <TechnicalSkillsLabel items={projectData.tech} />
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 

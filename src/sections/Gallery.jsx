@@ -56,7 +56,7 @@ const Gallery = () => {
         <p className="text-4xl font-medium text-white text-center">
           Favourite Works
         </p>
-        <div className="w-[58%] border-b-2 border-blue-300 mt-1" />
+        <div className="w-[58%] border-b-2 border-blue-400 mt-1" />
       </div>
       <div className="w-full">
         <div className="showcaselayout mt-15 relative">

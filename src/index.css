@@ -245,6 +245,15 @@ section {
     @apply flex justify-center items-center w-52 h-60 relative;
   }
 
+  /* PROJECTS SECTION */
+  .header-project-card {
+    @apply flex md:flex-row flex-col justify-between mt-15 relative border-2 border-[#1C1C21] bg-[#0E0E10] rounded-lg hover:bg-black-200 transform hover:-translate-y-2 transition-all duration-200 ease-linear;
+  }
+
+  .project-card {
+    @apply w-full h-full border-2 border-[#1C1C21] bg-[#0E0E10] rounded-lg flex flex-col justify-between hover:bg-black-200 transform hover:-translate-y-2 transition-all duration-200 ease-linear;
+  }
+
   /* GALLERY SECTION */
   .app-showcase {
     @apply w-full mt-10 px-5 md:px-20 py-10 md:py-20 flex flex-col items-center justify-center;

@@ -54,9 +54,14 @@ const Projects = () => {
         <p className="text-4xl font-medium text-white text-center">
           Featured Projects
         </p>
-        <div className="w-[50%] border-b-2 border-blue-300 mt-1" />
+        <div className="w-[50%] border-b-2 border-blue-400 mt-1" />
       </div>
-      <div className="project-container flex md:flex-row flex-col justify-between mt-15 relative border-2 border-[#1C1C21] bg-[#0E0E10] rounded-lg">
+      <a
+        href={HeaderProject.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group project-container header-project-card"
+      >
         <div className="md:h-[50vh] h-60 w-full rounded-xl">
           <img
             src={HeaderProject.image}
@@ -83,7 +88,7 @@ const Projects = () => {
             <TechnicalSkillsLabel items={HeaderProject.tech} />
           </div>
         </div>
-      </div>
+      </a>
       <div className="grid lg:grid-cols-2 gap-10 mt-10 relative w-full">
         {FeaturedProjects.map((project) => (
           <div className="project-container" key={project.key}>

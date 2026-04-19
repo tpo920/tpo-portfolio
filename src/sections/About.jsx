@@ -63,7 +63,7 @@ const About = () => {
             <p className="font-medium font-mb-0.5 text-lg text-[#dddddd]">
               Software Developer
             </p>
-            <div className="w-[12%] border-b-2 border-blue-300 mb-4.5" />
+            <div className="w-[12%] border-b-2 border-blue-400 mb-4.5" />
             <p className="grid-subtext mb-2.5 md:text-justify">
               I am an enthusiastic and driven individual that provides a
               versatile range of technical skills and a strong foundation for

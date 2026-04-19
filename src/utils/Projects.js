@@ -1,0 +1,34 @@
+export const FeaturedProjects = [
+  {
+    title: 'Pizza Shop Management Simulator',
+    description:
+      'Pizza Shop is a business management educational game that enables players to take on ' +
+      'the role of a pizza store manager to maximise profits through applying theoretical business ' +
+      'concepts learnt throughout the game.',
+    image: '/images/PizzaBusinessGame.png',
+    imageLabel: 'Pizza Game Image',
+    link: 'https://github.com/tpo920/Pizza-Shop-Management-Simulator',
+    tech: ['React', 'Phaser'],
+    key: 'pizza123',
+  },
+  {
+    title: 'RecipAI: Personalised Recipe Generator  ',
+    description:
+      'A full-stack web application to streamline the process of meal ideation and fitness tracking through utilising ' +
+      'OpenAI for a personalised experience and providing automated macro-nutrients tracking.',
+    image: '/images/RecipAI.png',
+    imageLabel: 'RecipAI Image',
+    link: 'https://github.com/UOA-CS732-SE750-Students-2024/project-group-jolly-jaguars',
+    tech: ['Next.js', 'Firebase', 'Material UI', 'OpenAI'],
+    key: 'recipai123',
+  },
+];
+
+export const HeaderProject = {
+  title: 'Vroom UoA Web Hub',
+  image: '/images/Vroom.png',
+  imageLabel: 'Vroom',
+  link: 'https://motorsports.wdcc.co.nz',
+  tech: ['React', 'Express', 'MongoDB'],
+  key: 'vroom',
+};

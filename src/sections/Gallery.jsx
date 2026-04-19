@@ -38,8 +38,8 @@ const Gallery = () => {
         {
           y: 0,
           opacity: 1,
-          duration: 1,
-          delay: 0.1 * (index + 1),
+          duration: 1.2,
+          delay: 0.12 * (index + 1),
           scrollTrigger: {
             trigger: component,
             start: 'top bottom-=100',
@@ -52,8 +52,14 @@ const Gallery = () => {
 
   return (
     <section id="gallery" ref={sectionRef} className="app-showcase">
+      <div>
+        <p className="text-4xl font-medium text-white text-center">
+          Favourite Works
+        </p>
+        <div className="w-[58%] border-b-2 border-blue-300 mt-1" />
+      </div>
       <div className="w-full">
-        <div className="showcaselayout">
+        <div className="showcaselayout mt-15 relative">
           {/* LEFT Section */}
           <div
             className="first-gallery-element-wrapper"

@@ -46,7 +46,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full px-5 md:px-20 py-10 md:py-20 md:mt-10 mt-20 flex items-center justify-center"
+      className="w-full px-5 md:px-20 py-20 md:mt-10 mt-25 flex items-center justify-center"
       ref={sectionRef}
     >
       <div className="grid lg:grid-cols-4 lg:grid-rows-2 grid-cols-1 w-full gap-5">

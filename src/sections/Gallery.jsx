@@ -59,7 +59,7 @@ const Gallery = () => {
         <div className="w-[58%] border-b-2 border-blue-400 mt-1" />
       </div>
       <div className="w-full">
-        <div className="showcaselayout mt-15 relative">
+        <div className="showcaselayout mt-10 sm:mt-15 relative">
           {/* LEFT Section */}
           <div
             className="first-gallery-element-wrapper"

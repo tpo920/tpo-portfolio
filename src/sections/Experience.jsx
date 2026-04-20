@@ -60,7 +60,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full px-5 xl:px-70 lg:px-50 md:px-30 py-10 md:py-20 md:mt-5 mt-15 flex flex-col items-center justify-center"
+      className="w-full px-5 xl:px-70 lg:px-50 md:px-30 py-20 md:mt-5 mt-15 flex flex-col items-center justify-center"
     >
       <div>
         <p className="text-4xl font-medium text-white text-center">
@@ -68,7 +68,7 @@ const Experience = () => {
         </p>
         <div className="w-[31%] border-b-2 border-blue-400 mt-1" />
       </div>
-      <div className="mt-15 relative">
+      <div className="mt-10 sm:mt-15 relative">
         <div className="relative z-50 xl:space-y-25 md:space-y-20 space-y-10">
           {WorkExperiences.map((card, index) => (
             <div key={index} className="exp-card-wrapper">

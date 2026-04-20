@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Suspense } from 'react';
 
 const HeroExperience = ({ ref }) => {
-  const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
+  const isTablet = useMediaQuery({ query: '(max-width: 1280px)' });
 
   return (
     <Canvas
@@ -34,7 +34,7 @@ const HeroExperience = ({ ref }) => {
         <directionalLight position={[-5, 0, 0]} intensity={2} />
 
         <group
-          scale={isTablet ? 1 : 1.5}
+          scale={isTablet ? 1.9 : 1.5}
           position={[-1, -2.7, 3]}
           rotation={[0, -Math.PI / 3.5, -0.25]}
         >

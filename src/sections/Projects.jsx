@@ -56,39 +56,41 @@ const Projects = () => {
         </p>
         <div className="w-[50%] border-b-2 border-blue-400 mt-1" />
       </div>
-      <a
-        href={HeaderProject.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group project-container header-project-card"
-      >
-        <div className="md:h-[50vh] h-60 w-full rounded-xl">
-          <img
-            src={HeaderProject.image}
-            alt={HeaderProject.imageLabel}
-            className="h-full w-full object-cover rounded-xl"
-          />
-        </div>
-        <div className="md:w-5/7 py-5 px-7">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-            {HeaderProject.title}
-          </h2>
-          <p className="text-[#afb0b6] mt-2 text-justify">
-            A WDCC (
-            <span className="italic font-medium">
-              Web Development & Consulting Club
-            </span>
-            ) team-based project to develop a modern, intuitive full stack
-            platform to streamline Vroom&apos;s operations with membership,
-            volunteer, and event management systems. I aided in implementing
-            responsive React components for the navigation bar and gallery web
-            page.
-          </p>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            <TechnicalSkillsLabel items={HeaderProject.tech} />
+      <div className="project-container">
+        <a
+          href={HeaderProject.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group header-project-card"
+        >
+          <div className="md:h-[50vh] h-60 w-full rounded-xl">
+            <img
+              src={HeaderProject.image}
+              alt={HeaderProject.imageLabel}
+              className="h-full w-full object-cover rounded-xl"
+            />
           </div>
-        </div>
-      </a>
+          <div className="md:w-5/7 py-5 px-7">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              {HeaderProject.title}
+            </h2>
+            <p className="text-[#afb0b6] mt-2 text-justify">
+              A WDCC (
+              <span className="italic font-medium">
+                Web Development & Consulting Club
+              </span>
+              ) team-based project to develop a modern, intuitive full stack
+              platform to streamline Vroom&apos;s operations with membership,
+              volunteer, and event management systems. I aided in implementing
+              responsive React components for the navigation bar and gallery web
+              page.
+            </p>
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              <TechnicalSkillsLabel items={HeaderProject.tech} />
+            </div>
+          </div>
+        </a>
+      </div>
       <div className="grid lg:grid-cols-2 gap-10 mt-10 relative w-full">
         {FeaturedProjects.map((project) => (
           <div className="project-container" key={project.key}>

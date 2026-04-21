@@ -34,7 +34,7 @@ const HeroExperience = ({ ref }) => {
         <directionalLight position={[-5, 0, 0]} intensity={2} />
 
         <group
-          scale={isTablet ? 1.9 : 1.5}
+          scale={isTablet ? 1.8 : 1.5}
           position={[-1, -2.7, 3]}
           rotation={[0, -Math.PI / 3.5, -0.25]}
         >

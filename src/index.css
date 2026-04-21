@@ -112,15 +112,15 @@ section {
 
   /* HERO SECTION */
   .hero-layout {
-    @apply relative z-10 md:h-dvh h-[80vh] xl:mt-5 lg:mt-30 mt-30 flex xl:items-center items-start justify-center;
+    @apply relative z-10 md:h-dvh h-[80vh] xl:mt-5 lg:mt-30 mt-35 flex xl:items-center items-start justify-center;
   }
 
   .hero-header {
-    @apply flex flex-col justify-center xl:text-[70px] md:text-[50px] text-[40px] font-semibold relative z-10 pointer-events-none;
+    @apply flex flex-col justify-center xl:text-[70px] md:text-[50px] sm:text-[40px] text-[35px] font-semibold relative z-10 pointer-events-none;
   }
 
   .hero-text {
-    @apply text-white-50 xl:text-xl text-lg relative z-10 pointer-events-none;
+    @apply text-white-50 xl:text-xl sm:text-lg text-sm relative z-10 pointer-events-none;
 
     .slide {
       @apply absolute pt-0 px-1.5 md:px-2 py-[25px] h-[16px] md:h-[25px] translate-y-[0.05rem] overflow-hidden;
@@ -128,7 +128,7 @@ section {
   }
 
   .hero-icons {
-    @apply flex gap-5 md:mt-0.5;
+    @apply flex gap-5 md:mt-0.5 z-50;
 
     .icon {
       @apply border border-black-50 bg-black-100 flex justify-center items-center rounded-lg size-10 md:size-12 cursor-pointer transition-all duration-500 hover:bg-black-50;
@@ -140,7 +140,7 @@ section {
   }
 
   .hero-3d-layout {
-    @apply xl:w-[70%] w-full xl:h-full h-[60%] min-h-[50vh] absolute xl:top-0 top-45 xl:-right-20 right-5;
+    @apply xl:w-[70%] w-full xl:h-full h-[60%] min-h-[50vh] absolute xl:top-0 sm:top-45 top-33 xl:-right-20 right-3;
   }
 
   /* Hero hobbies text slider starts */
@@ -257,7 +257,7 @@ section {
 
   /* GALLERY SECTION */
   .app-showcase {
-    @apply w-full mt-10 px-5 md:px-20 py-20 flex flex-col items-center justify-center;
+    @apply w-full md:mt-5 mt-0 px-5 md:px-20 py-20 flex flex-col items-center justify-center;
 
     .showcaselayout {
       @apply flex xl:flex-row flex-col gap-10 justify-between;

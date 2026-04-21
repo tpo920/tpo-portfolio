@@ -60,7 +60,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="w-full px-5 xl:px-70 lg:px-50 md:px-30 py-20 md:mt-5 mt-15 flex flex-col items-center justify-center"
+      className="w-full px-5 xl:px-70 lg:px-50 md:px-30 py-20 md:mt-5 mt-0 flex flex-col items-center justify-center"
     >
       <div>
         <p className="text-4xl font-medium text-white text-center">
@@ -85,14 +85,18 @@ const Experience = () => {
                     />
                   </div>
                   <div className="expText w-full h-full border-2 border-[#1C1C21] bg-[#0E0E10] rounded-lg py-5 px-7">
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row justify-between sm:gap-0 gap-5">
                       <h1 className="font-semibold text-2xl">{card.title}</h1>
-                      <p className="text-blue-300">{card.date}</p>
+                      <p className="text-blue-300 sm:text-base text-sm sm:text-left text-jusftify">
+                        {card.date}
+                      </p>
                     </div>
                     <p className="font-medium text-[#dddddd]">{card.company}</p>
                     <ul className="list-disc ms-5 mt-5 flex flex-col gap-2 text-[#afb0b6]">
                       {card.responsibilities.map((resp) => (
-                        <li key={resp}>{resp}</li>
+                        <li key={resp} className="sm:text-left text-justify">
+                          {resp}
+                        </li>
                       ))}
                     </ul>
                   </div>

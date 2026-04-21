@@ -47,7 +47,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full px-5 md:px-20 py-20 md:mt-10 mt-20 flex flex-col items-center justify-center"
+      className="w-full px-5 md:px-20 py-20 md:mt-5 mt-0 flex flex-col items-center justify-center"
       ref={sectionRef}
     >
       <div>

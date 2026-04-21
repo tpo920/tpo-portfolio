@@ -46,11 +46,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full px-5 md:px-20 py-20 md:mt-10 mt-25 flex items-center justify-center"
+      className="w-full px-5 md:px-20 py-20 mt-0 xl:mt-10 flex items-center justify-center"
       ref={sectionRef}
     >
       <div className="grid lg:grid-cols-4 lg:grid-rows-2 grid-cols-1 w-full gap-5">
-        <div className="grid-container p-3 lg:flex hidden">
+        <div className="w-full h-full p-5 border-2 border-[#1C1C21] rounded-lg lg:flex hidden">
           <img
             src="/images/ProfilePicture.jpg"
             alt="Profile Picture"
@@ -64,7 +64,7 @@ const About = () => {
               Software Developer
             </p>
             <div className="w-[12%] border-b-2 border-blue-400 mb-4.5" />
-            <p className="grid-subtext mb-2.5 md:text-justify">
+            <p className="grid-subtext mb-2.5 text-justify">
               I am an enthusiastic and driven individual that provides a
               versatile range of technical skills and a strong foundation for
               problem solving and data analysis. Although my primary interest
@@ -72,7 +72,7 @@ const About = () => {
               to a broader range of fields to work within cross-functional teams
               and diversify my skillset.
             </p>
-            <p className="grid-subtext md:text-justify">
+            <p className="grid-subtext text-justify">
               Moving forwards within my career, I am excited to grow as a
               developer, meet new individuals, and construct innovative
               solutions.
@@ -131,7 +131,7 @@ const About = () => {
         </div>
         <div className="grid-container lg:row-span-2 lg:col-start-4 lg:row-start-1">
           <p className="grid-headtext text-2xl">Technical Skills</p>
-          <p className="grid-subtext ">
+          <p className="grid-subtext sm:text-left text-justify">
             I am proficient in several programming languages and frameworks
             surronding web development. Although I prefer working on the
             frontend side through implementing user-friendly solutions, I am

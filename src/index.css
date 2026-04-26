@@ -135,7 +135,7 @@ section {
     }
 
     img {
-      @apply inline-block;
+      @apply inline-block w-5 h-5;
     }
   }
 
@@ -320,7 +320,7 @@ section {
       }
 
       img {
-        @apply inline-block;
+        @apply inline-block w-5 h-5;
       }
     }
   }
